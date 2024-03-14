@@ -32,5 +32,14 @@ namespace MauiAppListaDeCompras.Helpers
             return _conn.Table<Produto>().DeleteAsync(i=> i.Id == id);
         }
 
+        internal Task<List<Produto>> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal Task<List<Produto>> Search(string q)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
