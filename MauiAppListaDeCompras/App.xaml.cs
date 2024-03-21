@@ -28,5 +28,5 @@ namespace MauiAppListaDeCompras
             MainPage = new AppShell();
         }
     }
-    }
+}
 
