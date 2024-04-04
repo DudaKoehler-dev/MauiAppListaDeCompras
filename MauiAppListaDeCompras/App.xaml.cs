@@ -24,7 +24,7 @@ namespace MauiAppListaDeCompras
         }
         public App()
         {
-
+            InitializeComponent();
             MainPage = new AppShell();
         }
     }

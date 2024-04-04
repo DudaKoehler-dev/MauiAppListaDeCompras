@@ -39,12 +39,14 @@ namespace MauiAppListaDeCompras.Helpers
 
         internal Task<List<Produto>> Search(string q)
         {
-            throw new NotImplementedException();
+            string sql = "SELECT * FROM Produto WHERE descricao LIKE '%" + q + "%'";
+
+            return _conn.QueryAsync<Produto>(sql);
         }
 
-        internal Task Delete(int id)
+        internal Task<int> Delete(int id)
         {
-            throw new NotImplementedException();
+            return _conn.Table<Produto>().DeleteAsync(i => i.Id == id);
         }
     }
 }
